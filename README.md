@@ -1,9 +1,7 @@
 # 3hrs-player
-simple player - is just a HTML music player, heavily based on jQuery
+simple player - is just a HTML music player, written using jQuery, custom jQueryUI, scss
 
-## 
-[Demo here](http://vko-online.github.io/3hrs-player/)
-Proof of concept, written using jQuery, custom jQueryUI, scss
+## [Demo](http://vko-online.github.io/3hrs-player/)
 
 ## Idea
 For education purpose
