@@ -1,0 +1,103 @@
+$size: 50px;
+.player {
+  max-width: 400px;
+  height: $size;
+  .inner {
+    display: flex;
+    .controls {
+      width: $size;
+      .play-button {
+        outline: none;
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        cursor: pointer;
+        min-height: $size;
+        min-width: $size;
+        &.loading{
+          background: url(assets/playerbusy-noborder.gif) no-repeat 50% 50%;
+          border: none;
+          height: 42px;
+          margin: 4px auto;
+          width: 44px;
+          &:after{
+            display: none;
+          }
+        }
+        &.playing{
+          &:after{
+            content:'';
+            border:0;
+            border-left:7px solid #2d2d2d;
+            border-right:7px solid #2d2d2d;
+            height:22px;
+            width:4px;
+            margin: auto;
+          }
+        }
+        &:after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: 11px inset transparent;
+          border-bottom: 11px inset transparent;
+          border-left: 20px solid #222;
+          border-right: 0;
+          margin: 3px 0 0 10px;
+        }
+      }
+    }
+    .panel {
+      flex: 1;
+      padding-left: 5px;
+      padding-top: 3px;
+
+      .panel-inner {
+        .track {
+          padding: 0 5px;
+          display: flex;
+          .title {
+            flex: 1;
+            .title-song {
+
+            }
+            .title-artist {
+              margin-top: -3px;
+            }
+          }
+          .time {
+            width: 90px;
+            font-size: .9em;
+            text-align: right;
+          }
+        }
+        .line {
+          height: 8px;
+          position: relative;
+          background-color: rgba(255, 255, 255, .3);
+          border: 1px solid rgba(0, 0, 0, .15);
+          .seek{
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 0;
+            background: rgba(0,0,0,.1);
+            bottom: 0;
+          }
+          .pin {
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 10px;
+            background: #fff;
+            cursor: pointer;
+            top: -2px;
+            border: 1px solid rgba(0, 0, 0, .25);
+            //transition: left 1s ease;
+          }
+        }
+      }
+    }
+  }
+}
